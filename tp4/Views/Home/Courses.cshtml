@@ -1,0 +1,11 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1 class="alert-warning text-center">List of Courses</h1>
+<ul class="list-group">
+    @foreach(String s in ViewBag.courses){
+        <ol class="list-group-item"><a href="/Home/Course/@s">@s</a></ol>
+    }
+</ul>

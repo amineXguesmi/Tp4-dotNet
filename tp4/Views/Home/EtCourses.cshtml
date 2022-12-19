@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1 class="alert-warning text-center">Course : @ViewBag.Cname</h1>
+<ul class="list-group">
+    @foreach (Student s in ViewBag.StudentsPerCourse)
+    {
+        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+      <div class="card-header">@s.phone_number</div>
+      <div class="card-body">
+                <h5 class="card-title">@s.first_name @s.last_name</h5>
+        <p class="card-text">UNIVERSITY : @s.university </p>
+                <p class="card-text">timestamp : @s.timestamp </p>
+      </div>
+    </div>
+    }
+</ul>
